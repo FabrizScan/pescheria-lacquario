@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
       );
     }
 
-    // Save to D1 if available
+    // Save to D1
     if (env.DB) {
       await env.DB.prepare(
         `INSERT INTO bookings (name, phone, email, date, time, type, notes, created_at)
@@ -45,20 +45,20 @@ export async function onRequestPost(context) {
         .run();
     }
 
-    // Send email notification via MailChannels
-    const emailPayload = {
-      personalizations: [
-        {
-          to: [{ email: "pescherialacquario@outlook.it", name: "Pescheria L'Acquario" }],
+    // Send email notification via Resend
+    if (env.RESEND_API_KEY) {
+      const emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
         },
-      ],
-      from: { email: "noreply@pescherialacquariomolinella.com", name: "Sito Web - Prenotazione" },
-      reply_to: email ? { email: email, name: name } : undefined,
-      subject: `[Prenotazione] ${type} - ${name} - ${date} ore ${time}`,
-      content: [
-        {
-          type: "text/plain",
-          value: [
+        body: JSON.stringify({
+          from: "Prenotazione Sito Web <noreply@pescherialacquariomolinella.com>",
+          to: ["pescherialacquario@outlook.it"],
+          reply_to: email || undefined,
+          subject: `[Prenotazione] ${type} - ${name} - ${date} ore ${time}`,
+          text: [
             `Nuova prenotazione dal sito web`,
             ``,
             `Nome: ${name}`,
@@ -71,18 +71,12 @@ export async function onRequestPost(context) {
             ``,
             `Ricontattare per conferma: ${callback ? "Si" : "No"}`,
           ].join("\n"),
-        },
-      ],
-    };
+        }),
+      });
 
-    const emailResponse = await fetch("https://api.mailchannels.net/tx/v1/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(emailPayload),
-    });
-
-    if (!emailResponse.ok) {
-      console.error("MailChannels error:", await emailResponse.text());
+      if (!emailResponse.ok) {
+        console.error("Resend error:", await emailResponse.text());
+      }
     }
 
     return new Response(

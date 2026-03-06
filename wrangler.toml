@@ -1,12 +1,10 @@
 name = "pescheria-acquario"
 # account_id = set via CLOUDFLARE_ACCOUNT_ID env var
 compatibility_date = "2024-01-01"
+pages_build_output_dir = "public"
 
-# Pages project — static files served from public/
-# Functions auto-detected from functions/ directory
-
-# D1 Database binding (create with: npx wrangler d1 create pescheria-bookings)
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "pescheria-bookings"
-# database_id = "<your-database-id>"
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "pescheria-bookings"
+database_id = "f1bd642f-c566-4820-a7bb-5ae69917ee20"

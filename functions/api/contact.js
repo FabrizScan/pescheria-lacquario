@@ -32,20 +32,20 @@ export async function onRequestPost(context) {
       );
     }
 
-    // Send email via MailChannels
-    const emailPayload = {
-      personalizations: [
-        {
-          to: [{ email: "pescherialacquario@outlook.it", name: "Pescheria L'Acquario" }],
+    // Send email via Resend
+    if (env.RESEND_API_KEY) {
+      const emailResponse = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${env.RESEND_API_KEY}`,
+          "Content-Type": "application/json",
         },
-      ],
-      from: { email: "noreply@pescherialacquariomolinella.com", name: "Sito Web - Contatto" },
-      reply_to: { email: email, name: name },
-      subject: `[Sito Web] ${subject || "Nuovo messaggio"} - ${name}`,
-      content: [
-        {
-          type: "text/plain",
-          value: [
+        body: JSON.stringify({
+          from: "Contatto Sito Web <noreply@pescherialacquariomolinella.com>",
+          to: ["pescherialacquario@outlook.it"],
+          reply_to: email,
+          subject: `[Sito Web] ${subject || "Nuovo messaggio"} - ${name}`,
+          text: [
             `Nuovo messaggio dal sito web`,
             ``,
             `Nome: ${name}`,
@@ -56,18 +56,12 @@ export async function onRequestPost(context) {
             `Messaggio:`,
             message,
           ].join("\n"),
-        },
-      ],
-    };
+        }),
+      });
 
-    const emailResponse = await fetch("https://api.mailchannels.net/tx/v1/send", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(emailPayload),
-    });
-
-    if (!emailResponse.ok) {
-      console.error("MailChannels error:", await emailResponse.text());
+      if (!emailResponse.ok) {
+        console.error("Resend error:", await emailResponse.text());
+      }
     }
 
     return new Response(
