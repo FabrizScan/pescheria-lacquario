@@ -291,7 +291,7 @@ a:hover { color: var(--color-accent-dark); }
 }
 
 .hero__question {
-  font-size: 18px;
+  font-size: clamp(20px, 2.5vw, 26px);
   color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 12px;
@@ -545,6 +545,66 @@ a:hover { color: var(--color-accent-dark); }
   line-height: 1.7;
 }
 .about__quote p { margin-bottom: 0; color: var(--color-primary); }
+
+/* Story block */
+.about__story {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 64px;
+  padding: 48px;
+  background: var(--color-warm);
+  border-radius: var(--radius-lg);
+}
+
+.about__story-image {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.about__story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  min-height: 300px;
+}
+
+.about__story-caption {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.about__story-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.9;
+  color: var(--color-primary);
+  position: relative;
+}
+
+.about__story-text p {
+  margin-bottom: 16px;
+}
+
+.about__story-text p:first-child::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--color-accent);
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
 
 /* === COUNTERS === */
 .counters {
@@ -1064,6 +1124,8 @@ a:hover { color: var(--color-accent-dark); }
   .about__grid,
   .about__grid--reverse { grid-template-columns: 1fr; gap: 40px; }
   .about__grid--reverse .about__image { order: 0; }
+  .about__story { grid-template-columns: 1fr; gap: 32px; padding: 32px; }
+  .about__story-text { font-size: 16px; }
   .counters { grid-template-columns: repeat(2, 1fr); }
 }
 
