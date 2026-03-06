@@ -135,4 +135,5 @@ Si, su ordinazione e possibile selezionare il pesce preferito direttamente dal b
 - Home: https://www.pescherialacquariomolinella.com/
 - Prenotazione: https://www.pescherialacquariomolinella.com/prenotazione.html
 - llms.txt: https://www.pescherialacquariomolinella.com/llms.txt
+- Privacy Policy: https://www.pescherialacquariomolinella.com/privacy.html
 - llms-full.txt: https://www.pescherialacquariomolinella.com/llms-full.txt

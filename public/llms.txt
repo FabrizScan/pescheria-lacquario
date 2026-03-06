@@ -49,4 +49,5 @@ Orari ritiro: mattina 10:00–11:30 | pomeriggio 17:00–19:00.
 
 - Home: https://www.pescherialacquariomolinella.com/
 - Prenota: https://www.pescherialacquariomolinella.com/prenotazione.html
+- Privacy Policy: https://www.pescherialacquariomolinella.com/privacy.html
 - [llms-full.txt](https://www.pescherialacquariomolinella.com/llms-full.txt): versione completa con tutti i dettagli

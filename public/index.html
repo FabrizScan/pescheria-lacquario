@@ -7,6 +7,14 @@
   <meta name="description" content="Cerchi pesce fresco a Molinella? La Pescheria L'Acquario dal 1984 offre pesce freschissimo, frittura, crudi e piatti pronti da asporto. Prenota online o chiama il 051 882601.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.pescherialacquariomolinella.com/">
+  <link rel="alternate" hreflang="it" href="https://www.pescherialacquariomolinella.com/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#234951">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Pescheria L'Acquario Molinella &mdash; Pesce Fresco dal 1984 | Asporto e Prenotazioni">
@@ -14,11 +22,18 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.pescherialacquariomolinella.com/">
   <meta property="og:locale" content="it_IT">
+  <meta property="og:image" content="https://www.pescherialacquariomolinella.com/assets/images/hero.png">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1032">
+  <meta property="og:image:alt" content="Interno della Pescheria L'Acquario di Molinella - bancone pesce fresco">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Preload LCP image -->
+  <link rel="preload" as="image" href="/assets/images/hero.png">
 
   <link rel="stylesheet" href="/css/style.css">
 
@@ -66,7 +81,40 @@
     "sameAs": [
       "https://www.facebook.com/profile.php?id=100046238906234",
       "https://www.tripadvisor.it/Restaurant_Review-g1725279-d12082462-Reviews-Pescheria_E_Friggitoria_L_Acquario-Molinella_Province_of_Bologna_Emilia_Romagna.html"
-    ]
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "ratingCount": "3",
+      "reviewCount": "3"
+    },
+    "menu": "https://www.pescherialacquariomolinella.com/#prodotti",
+    "hasMenu": {
+      "@type": "Menu",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Pesce fresco",
+          "description": "Pesce fresco quotidiano dai mercati ittici italiani"
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Crudi di mare",
+          "description": "Tartare, carpacci e composizioni di pesce crudo abbattuto"
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Frittura di pesce",
+          "description": "Frittura di pesce croccante e fritti misti da asporto"
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Piatti pronti",
+          "description": "Sughi di mare, grigliate, antipasti e piatti cotti da asporto"
+        }
+      ]
+    }
   }
   </script>
 
@@ -118,7 +166,7 @@
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="header__logo">
-        <img src="/assets/images/logo.jpg" alt="Logo Pescheria L'Acquario" class="header__logo-img">
+        <img src="/assets/images/logo.jpg" alt="Logo Pescheria L'Acquario" class="header__logo-img" width="400" height="284">
         <span class="header__logo-text">
           <span class="header__logo-name">L'Acquario</span>
           <span class="header__logo-sub">Pescheria dal 1984</span>
@@ -169,7 +217,7 @@
     <div class="hero__right">
       <div class="hero__slider" id="hero-slider">
         <div class="hero__slide hero__slide--active">
-          <img src="/assets/images/hero.png" alt="Interno Pescheria L'Acquario Molinella">
+          <img src="/assets/images/hero.png" alt="Interno della Pescheria L'Acquario Molinella con bancone pesce fresco, mosaici blu e vetrine refrigerate" width="1920" height="1032">
         </div>
       </div>
       <div class="hero__slider-dots" id="hero-dots"></div>
@@ -191,13 +239,13 @@
         <div class="about__text">
           <p class="about__lead">Presso la Pescheria l'Acquario di Molinella, in provincia di Bologna, serviamo ogni giorno con orgoglio pesce freschissimo e frutti di mare che ci arrivano dai migliori fornitori dei mercati ittici italiani.</p>
           <p>Tutto il pesce presente alla Pescheria l'Acquario e preparato delicatamente e trasformato in ottimi antipasti, primi piatti, grigliate e fritti misti di pesce, dalle mani esperte dei nostri pescivendoli, sempre pronti a consigliarti sulla scelta migliore per un perfetto pasto di mare.</p>
-          <p>Siamo a Molinella, in Via Mazzini Giuseppe 120, e siamo aperti mattina e pomeriggio dal martedi al sabato: ti aspettiamo!</p>
+          <p>Siamo a Molinella, in Via Mazzini Giuseppe 120, e siamo aperti mattina e pomeriggio dal martedi al sabato. Scopri i nostri <a href="#prodotti">crudi di mare</a> e i <a href="#pesce-cotto">piatti pronti da asporto</a>!</p>
           <blockquote class="about__quote">
             <p>&laquo;Quando abbiamo aperto nel 1984 avevamo un obiettivo solo: portare il pesce piu fresco possibile a Molinella, ogni singolo giorno. Dopo quarant'anni il nostro impegno non e cambiato. Ogni mattina scegliamo personalmente il pescato migliore dai mercati ittici, e ogni cliente che entra dalla porta e un ospite da servire con la stessa cura del primo giorno.&raquo;</p>
           </blockquote>
         </div>
         <div class="about__image">
-          <img src="/assets/images/hero.png" alt="Interno della Pescheria L'Acquario Molinella - bancone pesce fresco">
+          <img src="/assets/images/hero.png" alt="Bancone della Pescheria L'Acquario Molinella con pesce fresco del giorno su ghiaccio" width="1920" height="1032" loading="lazy">
         </div>
       </div>
       <!-- Contatori full-width con icone -->
@@ -256,7 +304,7 @@
           <p>Se sei alla ricerca del miglior pesce fresco, di piatti pronti capaci di impressionare anche gli ospiti piu esigenti, di deliziose insalate, da noi troverai tutto quello che ti serve: lo staff della pescheria, sempre cordiale e attento ai dettagli, e felice di servirti consigliandoti sui nostri prodotti e sulla loro preparazione.</p>
         </div>
         <div class="about__image">
-          <img src="/assets/images/hero.png" alt="Bancone pesce fresco - Pescheria L'Acquario Molinella">
+          <img src="/assets/images/hero.png" alt="Selezione di pesce crudo fresco e crudi di mare alla Pescheria L'Acquario Molinella" width="1920" height="1032" loading="lazy">
         </div>
       </div>
     </div>
@@ -281,10 +329,10 @@
           <p class="about__lead">Frittura di pesce croccante, sughi di mare e piatti pronti da asporto a Molinella: la Pescheria l'Acquario cucina ogni giorno il pesce fresco del mattino per chi vuole portare a casa il sapore del mare senza fatica.</p>
           <p>La Pescheria l'Acquario porta la qualita direttamente sul piatto grazie alla ricca proposta di prodotti ittici cotti nella nostra cucina: parte del pesce che ogni giorno ci viene recapitato fresco e utilizzato dal nostro staff per la preparazione di piatti di mare ricchi, sani e veloci.</p>
           <p>Se ti serve un sugo gustoso per condire e rendere speciale un piatto di pasta, vuoi concederti uno spuntino goloso con una grande frittura, oppure sei alla ricerca di un antipasto di pesce sfizioso per dare un tocco particolare ad una cena tra amici, basta recarti presso la Pescheria l'Acquario.</p>
-          <p>Su ordinazione, ti offriamo anche la possibilita di selezionare il pesce che preferisci e che piu ti ispira direttamente dal nostro bancone, cucinandolo a puntino per le tue esigenze.</p>
+          <p>Su ordinazione, ti offriamo anche la possibilita di selezionare il pesce che preferisci e che piu ti ispira direttamente dal nostro bancone, cucinandolo a puntino per le tue esigenze. <a href="/prenotazione.html">Prenota il tuo ordine online</a> o <a href="tel:+39051882601">chiamaci</a>.</p>
         </div>
         <div class="about__image">
-          <img src="/assets/images/hero.png" alt="Piatti pronti di pesce - Pescheria L'Acquario Molinella">
+          <img src="/assets/images/hero.png" alt="Frittura di pesce e piatti pronti da asporto alla Pescheria L'Acquario Molinella" width="1920" height="1032" loading="lazy">
         </div>
       </div>
     </div>
@@ -315,13 +363,13 @@
       <div class="carousel" id="reviews-carousel">
         <div class="carousel__track">
           <div class="carousel__slide">
-            <img src="/assets/images/recensioni/recensione-1.png" alt="Recensione TripAdvisor - Valentino C: pesce fresco e preparato, 5 stelle">
+            <img src="/assets/images/recensioni/recensione-1.png" alt="Recensione TripAdvisor - Valentino C: pesce fresco e preparato, 5 stelle" width="755" height="468" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/assets/images/recensioni/recensione-2.png" alt="Recensione TripAdvisor - Vicky D: una garanzia, 5 stelle">
+            <img src="/assets/images/recensioni/recensione-2.png" alt="Recensione TripAdvisor - Vicky D: una garanzia, 5 stelle" width="759" height="314" loading="lazy">
           </div>
           <div class="carousel__slide">
-            <img src="/assets/images/recensioni/recensione-3.png" alt="Recensione Google - Veronica Bernardini: ottima scoperta, 5 stelle">
+            <img src="/assets/images/recensioni/recensione-3.png" alt="Recensione Google - Veronica Bernardini: ottima scoperta, 5 stelle" width="518" height="154" loading="lazy">
           </div>
         </div>
         <button class="carousel__btn carousel__btn--prev" aria-label="Precedente">
@@ -377,7 +425,7 @@
             <div class="form__group">
               <label class="form__checkbox">
                 <input type="checkbox" name="privacy" required>
-                <span>Accetto la Privacy Policy *</span>
+                <span>Accetto la <a href="/privacy.html" target="_blank">Privacy Policy</a> *</span>
               </label>
             </div>
             <div class="form__group">
@@ -435,11 +483,11 @@
       </div>
       <div class="footer__bottom">
         <span class="footer__vat">P.IVA 01011630389</span>
-        <p class="footer__copy">&copy; 2025 Pescheria L'Acquario. Tutti i diritti riservati.</p>
+        <p class="footer__copy">&copy; 2025 Pescheria L'Acquario. Tutti i diritti riservati. | <a href="/privacy.html" style="color: inherit; text-decoration: underline;">Privacy Policy</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="/js/main.js"></script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>
