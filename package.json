@@ -1,0 +1,17 @@
+{
+  "name": "pescheria-acquario",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx wrangler pages dev public/",
+    "deploy": "npx wrangler pages deploy public/ --project-name=pescheria-acquario",
+    "db:create": "npx wrangler d1 create pescheria-bookings",
+    "db:migrate": "npx wrangler d1 execute pescheria-bookings --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  },
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

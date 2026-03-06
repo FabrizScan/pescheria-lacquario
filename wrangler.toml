@@ -1,0 +1,11 @@
+name = "pescheria-acquario"
+compatibility_date = "2024-01-01"
+
+# Pages project — static files served from public/
+# Functions auto-detected from functions/ directory
+
+# D1 Database binding (create with: npx wrangler d1 create pescheria-bookings)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "pescheria-bookings"
+# database_id = "<your-database-id>"

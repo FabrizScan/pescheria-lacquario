@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS bookings (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  email TEXT DEFAULT '',
+  date TEXT NOT NULL,
+  time TEXT NOT NULL,
+  type TEXT NOT NULL,
+  notes TEXT DEFAULT '',
+  created_at TEXT NOT NULL
+);
